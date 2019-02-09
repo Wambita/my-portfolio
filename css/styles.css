@@ -13,5 +13,15 @@ h1{
     padding:5%;
 
    }
+header{
+    background-color: #117A65;
+
+}
+.nav,a{
+    font-family: 'Varela Round', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize
+}
 
        
