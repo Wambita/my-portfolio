@@ -17,7 +17,8 @@ This website gives deatils about Sheila Fana. It has  a navigation bar  that ena
 ## Known Bugs
 There are no known Bugs
 ## Technologies Used
-i used HTML to create the website and CSS to style the website. 
+i used HTML to create the website and CSS to style the website.
+i used visual studio code to create the portfolio readme 
 ## Support and contact details
 contact this number if you have any issues: 0722846189
 email: wambitafana@gmail.com
