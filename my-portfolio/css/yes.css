@@ -1,0 +1,123 @@
+.container{
+    border-width:1000px;
+      overflow-x: hidden;
+  }
+  h1{
+    color:white;
+    font-family: 'Pompiere', cursive;
+    margin-top:0;
+    font-size:5.0em;
+    text-align:center;
+    text-decoration: underline;
+    letter-spacing:0.2em;
+    padding:10%;
+  }
+  header{
+    background-image:url("http://hairstylealbum.com/wp-content/uploads/2014/08/taylor-swift-curly-hairstyle-2.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:left;
+  }
+  #biodata{
+    color:white;
+    font-size:1.5em;
+    font-family: 'Delius Swash Caps', cursive;
+    margin: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.25em;
+  }
+  p{
+    font-family: 'Delius Swash Caps', cursive;
+    color:white;
+    margin-left:1.875em;
+      font-size:2.0em;
+  }
+  #body{
+  background-image:url("https://celebmafia.com/wp-content/uploads/2014/12/taylor-swift-photoshoot-2014-_1.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  width:100%;
+  }
+  #image,#pic{
+    display:flex;
+    flex-direction:row;
+    border-radius:50%;
+  
+  }
+  .link ,.more ,.AUDIO ,.learn ,#nav{
+    font-size:1.5em;
+    color:#F0FFFF;
+    background-color: #151515;
+    padding: 0.935em 1em;
+    text-align: center;
+    text-decoration: uppercase;
+    display: inline-block;
+    margin: 0.25em 0.125em;
+    cursor: pointer;
+    border-radius:0.75em;
+  }
+  nav,ul,li{
+    font-size:1em;
+    font-family: 'Pompiere', cursive;
+  }
+  #sm{
+    display:inline-block;
+    margin-right:1em;
+    margin-left:1em;
+      
+    }
+    #nav,a{
+      display:inline-block;
+    font-family: 'Pompiere', cursive;
+      font-size:1.3em;
+      text-decoration:none;
+      text-transform:uppercase;
+      color:#F0FFFF;
+      background-color:#151515;
+      }
+    a:hover{
+      box-shadow:0 0 0 0.5em #000000 ;
+      background-color:#000000;
+    }
+    #videos,#audio{
+      display:flex;
+      padding:1%;
+      flex-direction:row;
+      justify-content:space-between;
+    }
+  .nav>nav{
+      background-color:#000000;
+      padding-top:1em;
+      padding-bottom:1em;
+      padding-left:1em;
+      padding-right:28em;
+      opacity: 0.8;
+      position:fixed;
+      width: 100%;
+    }
+    footer{
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7); 
+    color:#BCC6CC;
+    padding:1.25em;
+    z-index:2;
+    }
+    .follow{
+      font-family: 'Codystar', cursive;
+      text-align:center;
+      font-size:1.5em;
+    }
+    #pic{
+    padding: 3.125em;
+    transition: transform .2s; 
+    width: 15em;
+    height: 15em;
+    margin: 0 auto;
+  }
+  #pic:hover {
+    transform: scale(1.4)
+  }
+  
