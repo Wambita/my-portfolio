@@ -43,16 +43,16 @@ footer{
 #nav{
 display: inline-block;
 }
-p{
+p , h4{
     font-family: 'Varela Round', sans-serif;
     font-size:2em;
 }
 h2,h3{
     font-family: 'Cinzel', serif;
     margin-top: 0%;
-    font-size: 5em;
+    font-size: 3em;
     text-align: center;
-    color: #117A65;
+    color: #000000;
     text-decoration: underline
 }
  img{
@@ -83,6 +83,9 @@ h2,h3{
   body{
       background-color: #117A65;
   }
+a.hover {
+    background-color: #0CA983;
+}
 
 
 
