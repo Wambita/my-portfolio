@@ -1,0 +1,1053 @@
+<html><head><base href="index.html">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheila Fana - UI/UX Designer Extraordinaire</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary: #5c6bc0;
+  --secondary: #4ecdc4;
+  --dark: #2c3e50;
+  --light: #f7f7f7;
+  --accent: #64ffda;
+  --bg1: #ffffff;
+  --bg2: #f0f4f8;
+  --text: #333333;
+}
+
+.dark-mode {
+  --primary: #7986cb;
+  --secondary: #00ced1;
+  --dark: #1a1a1a;
+  --light: #f0f0f0;
+  --accent: #64ffda;
+  --bg1: #121212;
+  --bg2: #1e1e1e;
+  --text: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg1);
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  position: relative;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero-content {
+  text-align: center;
+  color: var(--light);
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--dark);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+.cta-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio {
+  padding: 5rem 0;
+  background-color: var(--bg1);
+}
+
+.portfolio h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-item-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--light);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-item-content {
+  transform: translateY(0);
+}
+
+.portfolio-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skills {
+  background-color: var(--bg2);
+  color: var(--text);
+  padding: 5rem 0;
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  margin-bottom: 2rem;
+}
+
+.skill-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-progress {
+  background-color: var(--bg1);
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress-bar {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 5px;
+  transition: width 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-me {
+  padding: 5rem 0;
+  background-color: var(--bg1);
+}
+
+.about-me-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-me-text {
+  flex: 1;
+}
+
+.about-me h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.about-me p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.about-me-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-me-image img {
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cv-btn {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: var(--dark);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  margin-top: 60px;
+}
+
+.view-more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-more-btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: var(--secondary);
+}
+
+.hire-me {
+  background-color: var(--bg2);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hire-me h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.hire-me p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: var(--text);
+}
+
+.hire-btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--dark);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hire-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: var(--primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Dark mode styles */
+.dark-mode .portfolio-item {
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .about-me-image img {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .hire-btn:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Improved visibility for dark text */
+.dark-mode .nav-links a,
+.dark-mode .portfolio-item-content {
+  color: var(--light);
+}
+
+.dark-mode .portfolio-item-content h3,
+.dark-mode .portfolio-item-content p {
+  color: var(--light);
+}
+
+.dark-mode .cv-btn,
+.dark-mode .hire-btn {
+  color: var(--dark);
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 3rem 0;
+  margin-top: 5rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: var(--light);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Existing styles remain unchanged */
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .about-me-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-me-text,
+  .about-me-image {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .theme-switch-wrapper {
+    margin-top: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .cta-btn {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .about-me-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-me-text {
+    max-width: 100%;
+  }
+
+  .about-me-image img {
+    max-width: 70%;
+  }
+
+  footer {
+    padding: 2rem 0;
+  }
+
+  .footer-section {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 0.6rem 1.2rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-me-image img {
+    max-width: 90%;
+  }
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--light);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+/* Moving bubbles animation */
+.bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: rise 10s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation-duration: 8s;
+}
+
+.bubble:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  left: 20%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: 35%;
+  animation-duration: 7s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  animation-duration: 11s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(5) {
+  width: 35px;
+  height: 35px;
+  left: 55%;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(6) {
+  width: 45px;
+  height: 45px;
+  left: 65%;
+  animation-duration: 8s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(7) {
+  width: 90px;
+  height: 90px;
+  left: 70%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(8) {
+  width: 25px;
+  height: 25px;
+  left: 80%;
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(9) {
+  width: 15px;
+  height: 15px;
+  left: 70%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(10) {
+  width: 90px;
+  height: 90px;
+  left: 25%;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+
+@keyframes rise {
+  0% {
+    bottom: -100px;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translate(100px, -500px);
+  }
+  100% {
+    bottom: 1080px;
+    transform: translateX(-200px);
+  }
+}
+
+.dark-mode .bubble {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">Sheila</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Sheila Fana</h1>
+        <p>UI/UX Designer Extraordinaire</p>
+        <a href="#portfolio" class="cta-btn">View My Work</a>
+      </div>
+      <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </section>
+
+    <section id="about" class="about-me">
+      <div class="container">
+        <div class="about-me-content">
+          <div class="about-me-text">
+            <h2>About Me</h2>
+            <p>Hi, I'm  Sheila Fana, a passionate UI/UX designer with a keen eye for detail and a love for creating intuitive, user-centered designs. With years of experience in the field, I've honed my skills to deliver exceptional digital experiences that not only look great but also solve real user problems.</p>
+            <p>My approach combines creativity with data-driven insights, ensuring that every design decision is purposeful and impactful. I thrive on collaboration and am always excited to take on new challenges in the ever-evolving world of digital design.</p>
+            <a href="#" class="cv-btn" download>Download CV</a>
+          </div>
+          <div class="about-me-image">
+            <img src="https://websim.dev/portfolio/alex-profile.jpg" alt="Alex Delight, UI/UX Designer" width="300" height="300">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img src="https://websim.dev/portfolio/project1.jpg" alt="E-commerce redesign project" width="400" height="300">
+            <div class="portfolio-item-content">
+              <h3>E-commerce Redesign</h3>
+              <p>A complete overhaul of an online store, focusing on improved user experience and conversion rates.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://websim.dev/portfolio/project2.jpg" alt="Mobile banking app design" width="400" height="300">
+            <div class="portfolio-item-content">
+              <h3>Mobile Banking App</h3>
+              <p>A sleek and secure mobile banking application designed for ease of use and quick transactions.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://websim.dev/portfolio/project3.jpg" alt="Travel planning website design" width="400" height="300">
+            <div class="portfolio-item-content">
+              <h3>Travel Planner Website</h3>
+              <p>An intuitive travel planning platform that simplifies trip organization and discovery.</p>
+            </div>
+          </div>
+        </div>
+        <div class="view-more">
+          <a href="#" class="view-more-btn">View More Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2>My Skills</h2>
+        <ul class="skills-list">
+          <li class="skill-item">
+            <h3>UI Design</h3>
+            <div class="skill-progress">
+              <div class="skill-progress-bar" style="width: 95%;"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <h3>UX Design</h3>
+            <div class="skill-progress">
+              <div class="skill-progress-bar" style="width: 90%;"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <h3>User Research</h3>
+            <div class="skill-progress">
+              <div class="skill-progress-bar" style="width: 85%;"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <h3>Wireframing</h3>
+            <div class="skill-progress">
+              <div class="skill-progress-bar" style="width: 92%;"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <h3>Prototyping</h3>
+            <div class="skill-progress">
+              <div class="skill-progress-bar" style="width: 88%;"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <h3>Information Architecture</h3>
+            <div class="skill-progress">
+              <div class="skill-progress-bar" style="width: 80%;"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <h3>Interaction Design</h3>
+            <div class="skill-progress">
+              <div class="skill-progress-bar" style="width: 87%;"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <h3>Usability Testing</h3>
+            <div class="skill-progress">
+              <div class="skill-progress-bar" style="width: 82%;"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="hire-me" class="hire-me">
+      <div class="container">
+        <h2>Why Hire Me?</h2>
+        <p>With a proven track record of delivering exceptional UI/UX designs, I bring creativity, technical expertise, and a user-centered approach to every project. My designs not only look stunning but also drive user engagement and business growth.</p>
+        <a href="#contact" class="hire-btn">Let's Work Together</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Me</h3>
+          <p>I'm Alex Delight, a passionate UI/UX designer dedicated to creating intuitive and visually stunning digital experiences. Let's bring your ideas to life!</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: alex@delightdesign.com</p>
+          <p>Phone: +1 (555) 123-4567</p>
+          <p>Location: San Francisco, CA</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Me</h3>
+          <div class="social-icons">
+            <a href="https://twitter.com/alexdelight" target="_blank" rel="noopener noreferrer">🐦</a>
+            <a href="https://www.linkedin.com/in/alexdelight" target="_blank" rel="noopener noreferrer">💼</a>
+            <a href="https://www.behance.net/alexdelight" target="_blank" rel="noopener noreferrer">🎨</a>
+            <a href="https://github.com/alexdelight" target="_blank" rel="noopener noreferrer">💻</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Alex Delight. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const checkbox = document.getElementById('checkbox');
+    const body = document.body;
+
+    checkbox.addEventListener('change', function() {
+      body.classList.toggle('dark-mode');
+    });
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const fadeInObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const fadeInElements = document.querySelectorAll('.about-me, .portfolio, .skills, .hire-me');
+    fadeInElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      fadeInObserver.observe(el);
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Animate skill progress bars
+    const skillProgressBars = document.querySelectorAll('.skill-progress-bar');
+    const animateSkills = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.getAttribute('data-width');
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const skillsObserver = new IntersectionObserver(animateSkills, { threshold: 0.5 });
+
+    skillProgressBars.forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0';
+      bar.setAttribute('data-width', width);
+      skillsObserver.observe(bar);
+    });
+
+    // Dark mode integration
+    const darkModeToggle = document.getElementById('checkbox');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        darkModeToggle.checked = true;
+        document.body.classList.add('dark-mode');
+      }
+    }
+
+    darkModeToggle.addEventListener('change', function() {
+      if (this.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        document.body.classList.add('dark-mode');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        document.body.classList.remove('dark-mode');
+      }
+    });
+  </script>
+</body>
+</html>
