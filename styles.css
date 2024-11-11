@@ -120,30 +120,28 @@ body{
 .btn-box a:hover::before{
     width: 100%;
 }
-.home-sci{
+#home-sci{
     position: absolute;
     bottom: 40px;
     width: 170px;
     display: flex;
     justify-content: space-between ;
+    border-radius: 50%;
 }
-.home-sci a{
+#home-sci a{
     position: relative;
     display: inline-flex;
     justify-content: center;
     width: 40px;
     height: 40px;
-    background:transparent;
-    border: 2px solid #00abf0;
     border-radius: 50%;
     font-size: 28px;
-    color: #00abf0;
     text-decoration: none;
     z-index: 1;
     overflow: hidden;
     transition: .5s;
 }
-.having-sci a:hover{
+.home-sci a:hover{
     color: #081b29;
 }
 .home-sci a::before {
@@ -161,7 +159,7 @@ body{
     width: 100%;
 }
 .home-imgHover{
-
+    color:#00abf0;
 }
 .footer {
     background-color: #081b29;
