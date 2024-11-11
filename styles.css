@@ -141,26 +141,7 @@ body{
     overflow: hidden;
     transition: .5s;
 }
-.home-sci a:hover{
-    color: #081b29;
-}
-.home-sci a::before {
-    content:" ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background:#00abf0;
-    z-index: -1;
-    transition: .5s;
-}
-.home-sci a:hover::after {
-    width: 100%;
-}
-.home-imgHover{
-    color:#00abf0;
-}
+
 .footer {
     background-color: #081b29;
     padding: 10px;
