@@ -95,7 +95,7 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-.home {
+.home{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -316,6 +316,7 @@ section {
 
 .about {
     background: var(--second-bg-color);
+    padding: auto;
 }
 
 .heading {
@@ -344,27 +345,29 @@ section {
 }
 
 .about-shape {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     background-image: url("profilepic.png");
     background-repeat: no-repeat;
     background-size: cover; /* Makes the image cover the entire shape */
-    /* background-position: center; Centers the image within the circle */
+     background-position: center; 
     border-radius: 50%;
     position: relative;
     animation: float 3s ease-in-out infinite;
 }
 
-.about-text h3 {
+.about h3 {
     font-size: 2.6rem;
     margin-bottom: 2rem;
     color: var(--main-color);
+    text-align: center;
 }
 
-.about-text p {
+.about p {
     font-size: 1.6rem;
     margin-bottom: 3rem;
     line-height: 1.7;
+    text-align: center;
 }
 
 /*Responsive styling*/
@@ -694,7 +697,6 @@ section {
 /* Services Section */
 .services {
     background: var(--bg-color);
-     /* padding: 5rem 0;  */
 }
 
 .heading {
@@ -713,7 +715,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 0 5%; 
+    padding: 2rem 5%; 
 }
 
 .services-box {
@@ -777,7 +779,7 @@ section {
 /* Skills Summary Section */
 .skills-summary {
     background: var(--second-bg-color);
-    /* padding: 5rem 0; */
+    padding: 5rem 0;
 }
 
 .heading {
@@ -858,7 +860,7 @@ section {
 }
 .portfolio {
     background: var(--bg-color);
-    /* padding: 4rem 0; */
+    padding: 4rem 0;
     text-align: center;
 }
 
@@ -874,14 +876,14 @@ section {
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 0 2rem;
+    gap: 4rem;
+    padding: 2rem 4rem;
 }
 
 .project {
     background: var(--second-bg-color);
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2rem 2rem;
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -937,7 +939,6 @@ section {
 
 .contact {
     background: var(--second-bg-color);
-    /* padding: 4rem 0; */
     text-align: center;
 }
 
@@ -1002,10 +1003,7 @@ section {
     color: var(--main-color);
 
 }
-/* Contact Details Styling */
-.contact-info {
-    padding: 2rem;
-    }
+
 
 .contact-info ul {
     list-style-type: none; /* Removes default bullet points */
