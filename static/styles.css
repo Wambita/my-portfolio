@@ -104,7 +104,8 @@ section {
 }
 
 .home-content {
-    max-width: 60rem;
+    width: 100%; /* Make the contact-info container take full width */
+    max-width: 800px; /* Optionally limit the max width */
 }
 
 .home-content h1 {
@@ -116,7 +117,7 @@ section {
     position: relative;
     white-space: nowrap;
     border-right: 4px solid var(--main-color);
-    animation: typing 4s steps(20) infinite,
+    animation: typing 4s steps(18) infinite,
                cursor .4s step-end infinite alternate;
     overflow: hidden;
 }
@@ -510,7 +511,26 @@ section {
     }
 }
 
+@media (max-width: 520px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home-content h1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
 @media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 5.2rem;
+    }
+
+    .home {
+        justify-content: center;
+    }
+
     .btn-box {
         flex-direction: column;
         align-items: center;
@@ -535,6 +555,27 @@ section {
 
     .home-sci a:hover {
         transform: scale(1.1);
+    }
+}
+@media (max-width: 376px) {
+    .home {
+        justify-content: center;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .home-content h1{
+        font-size: 4.5rem;
+    }
+
+    .btn-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
     }
 }
 
