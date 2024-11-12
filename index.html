@@ -1,57 +1,338 @@
-<html lang="en">
-<head>
+<!DOCTYPE html>
+<html>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sheila Fana</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    
     <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/site.webmanifest">
-<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-
-</head>
-<body>
-    <header class="header">
-        <a href="" class="logo">Sheila.</a>
-        <nav class="navbar">
-            <a href="" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="">Services</a>
-            <a href="">Projects</a>
-            <a href="">Contact</a>
-        </nav>
-    </header>
-   <section class="home">
-        <div class="home-content">
-            <h1>Hi, I'm Sheila Fana</h1>
-            <h3>Software Engineer</h3>
-            <p>I am passionate about contributing to AI and software development, driving innovation with my problem-solving skills. Proficient in Python, Go, and JavaScript, I bring a dynamic and adaptable approach honed through various professional roles. My commitment to continuous learning fuels organizational growth in the evolving field of technology.</p>
-            <div class="btn-box">
-                <a href="resume.pdf" download="Wambita Fana CV.pdf">Download CV</a>
-                <a href="mailto:wambitafana@gmail.com">Let's Talk</a>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo-container">
+                <a href="index.html" class="logo">Fana.</a>
+            </div>
+    
+            <div class="menu-btn">
+                <i class="bx bx-menu"></i>
+            </div>
+    
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+    
+        <section class="home" id="home">
+            <div class="home-content">
+                <h1 class="typewriter">Hi, I'm Sheila Fana</h1>
+                <h3>Software Engineer</h3>
+                <p>I am a versatile software engineer passionate about creating exceptional digital experiences. With expertise in UI/UX design, front-end development, and full-stack technologies, I bring a holistic approach to every project. My goal is to craft innovative solutions that not only meet technical requirements but also delight users with their intuitiveness and aesthetic appeal.</p>
+                <div class="btn-box">
+                    <a href="#contact">Hire Me</a>
+                    <a href="#portfolio">Let's Talk</a>
+                </div>
+    
+                <div class="home-sci">
+                    <a href="https://facebook.com"><i class="bx bxl-facebook"></i></a>
+                    <a href="https://twitter.com"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://linkedin.com"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+    
+            <div class="floating-logo">
+                <div class="floating-text">Fana <br> {/}</div>
+            </div>
+        </section>
+    
+        <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <div class="about-grid">
+                <div class="about-img">
+                    <div class="about-shape"></div>
+                </div>
+                <div class="about-text">
+                    <h3>Software Engineer &amp; UI/UX Designer</h3>
+                    <p>With over 5 years of experience in software development, I specialize in creating intuitive and efficient solutions. My expertise spans across modern web technologies, cloud computing, and responsive design principles. I'm passionate about writing clean, maintainable code and building user-centered applications.</p>
+                    
+                    <div class="timeline">
+                        <h3>Experience &amp; Education</h3>
+                        
+                        <div class="timeline-item">
+                            <span class="date">2022 - Present</span>
+                            <h4>Senior Software Engineer</h4>
+                            <p>TechCorp Solutions</p>
+                            <ul>
+                                <li>Led development of enterprise-scale web applications</li>
+                                <li>Mentored junior developers and implemented best practices</li>
+                            </ul>
+                        </div>
+    
+                        <div class="timeline-item">
+                            <span class="date">2019 - 2022</span>
+                            <h4>Full Stack Developer</h4>
+                            <p>Digital Innovations Inc.</p>
+                            <ul>
+                                <li>Developed and maintained multiple client projects</li>
+                                <li>Implemented responsive design principles</li>
+                            </ul>
+                        </div>
+    
+                        <div class="timeline-item">
+                            <span class="date">2015 - 2019</span>
+                            <h4>Bachelor of Science in Computer Science</h4>
+                            <p>Tech University</p>
+                            <ul>
+                                <li>Dean's List all semesters</li>
+                                <li>Led Computer Science Society</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="btn-box">
+                        <a href="path/to/resume.pdf" download="">Download CV</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="btn-box" id="home-sci">
-            <a href="https://web.facebook.com/profile.php?id=100089966176819"><i class='bx bxl-facebook'></i></a>
-            <a href="https://x.com/FanaSheila"><i class='bx bxl-twitter'></i></a>
-            <a href="https://www.linkedin.com/in/fana-wambita-690a48213/">  <i class='bx bxl-linkedin'></i></a>
-        </div>
-        
     
-        <span class="home-imgHover">
-            
-        </span>
-   </section>
-   <footer class="footer">
-    <p class="footer">&copy; Sheila Fana. All rights reserved.</p>
-  </footer>
+    </section>
+    
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <p>Creating responsive, modern websites using the latest technologies and best practices for optimal performance and user experience.</p>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Responsive Web Design</li>
+                    <li>Performance Optimization</li>
+                    <li>Accessibility Standards</li>
+                </ul>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-palette'></i>
+                <h3>UI/UX Design</h3>
+                <p>Crafting intuitive user interfaces and experiences that engage users and meet business objectives through research-driven design.</p>
+                <ul>
+                    <li>Wireframing & Prototyping</li>
+                    <li>User Research & Testing</li>
+                    <li>Interaction Design</li>
+                    <li>Visual Design & Branding</li>
+                </ul>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-layer'></i>
+                <h3>Full-Stack Development</h3>
+                <p>Building scalable, efficient, and secure applications with both front-end and back-end technologies.</p>
+                <ul>
+                    <li>JavaScript, Python</li>
+                    <li>Node.js & Express</li>
+                    <li>Database Management (SQL, MongoDB)</li>
+                    <li>API Development & Integration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-summary" id="skills">
+        <h2 class="heading">Skills <span>Summary</span></h2>
+        <div class="skills-container">
+            <div class="skills-category">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Responsive Design</li>
+                    <li>Performance Optimization</li>
+                    <li>Accessibility Standards</li>
+                </ul>
+            </div>
+
+            <div class="skills-category">
+                <i class='bx bx-palette'></i>
+                <h3>UI/UX Design</h3>
+                <ul>
+                    <li>Wireframing & Prototyping</li>
+                    <li>User Research & Testing</li>
+                    <li>Interaction Design</li>
+                    <li>Visual Design & Branding</li>
+                </ul>
+            </div>
+
+            <div class="skills-category">
+                <i class='bx bx-layer'></i>
+                <h3>Full-Stack Development</h3>
+                <ul>
+                    <li>JavaScript, Python</li>
+                    <li>Node.js & Express</li>
+                    <li>Database Management (SQL, MongoDB)</li>
+                    <li>API Development & Integration</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <i class='bx bx-plus'></i>
+
+                <h3>Other Skills</h3>
+                <ul>
+                <li>Artificial Intelligence (AI)</li>
+                <li>Machine Learning (ML)</li>
+                <li>Blockchain</li>
+                <li>Data Science</li>
+                <li>Blockchain Development</li>
+                <li>Cybersecurity</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">My <span>Portfolio</span></h2>
+        <div class="portfolio-container">
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project 1 Title</h3>
+                    <p>Brief description of Project 1.</p>
+                    <a href="https://github.com/Wambita/project1" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+    
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <div class="project-info">
+                    <h3>Project 2 Title</h3>
+                    <p>Brief description of Project 2.</p>
+                    <a href="https://github.com/Wambita/project2" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+    
+            <div class="project">
+                <img src="project3.jpg" alt="Project 3">
+                <div class="project-info">
+                    <h3>Project 3 Title</h3>
+                    <p>Brief description of Project 3.</p>
+                    <a href="https://github.com/Wambita/project3" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+    
+            <div class="project">
+                <img src="project4.jpg" alt="Project 4">
+                <div class="project-info">
+                    <h3>Project 4 Title</h3>
+                    <p>Brief description of Project 4.</p>
+                    <a href="https://github.com/Wambita/project4" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+    
+            <div class="project">
+                <img src="project5.jpg" alt="Project 5">
+                <div class="project-info">
+                    <h3>Project 5 Title</h3>
+                    <p>Brief description of Project 5.</p>
+                    <a href="https://github.com/Wambita/project5" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+    
+            <div class="project">
+                <img src="project6.jpg" alt="Project 6">
+                <div class="project-info">
+                    <h3>Project 6 Title</h3>
+                    <p>Brief description of Project 6.</p>
+                    <a href="https://github.com/Wambita/project6" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Get in <span>Touch</span></h2>
+    
+        <div class="contact-container">
+            <!-- Email Section -->
+            <div class="contact-email">
+                <h3>Send Me a Message</h3>
+                <form id="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email (I don't share your info)" required>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+    
+            <!-- Contact Details Section -->
+            <div class="contact-details">
+                <h3>Contact Details</h3>
+                <div class="contact-info">
+                    <ul>
+                        <li><i class="bx bx-phone"></i> +123 456 7890</li>
+                        <li><i class="bx bx-mail-send"></i> your-email@example.com</li>
+                        <li><i class="bx bx-map"></i> 123 Main Street, City, Country</li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="https://twitter.com/yourusername" target="_blank"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://github.com/yourusername" target="_blank"><i class="bx bxl-github"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright © 2024 by Sheila Fana | All Rights Reserved.</p>
+            </div>
+    
+            <div class="footer-iconTop">
+                <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+            </div>
+        </footer>
 
     
-</body>
-</html>
+        <script>
+            // Mobile menu toggle
+            const menuBtn = document.querySelector('.menu-btn');
+            const navbar = document.querySelector('.navbar');
+            const header = document.querySelector('.header');
+    
+            menuBtn.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+            });
+    
+            // Close menu when clicking a link
+            document.querySelectorAll('.navbar a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navbar.classList.remove('active');
+                });
+            });
+    
+            // Sticky header
+            window.onscroll = () => {
+                header.classList.toggle('sticky', window.scrollY > 100);
+            };
+        </script>
+        <script src="app.js"></script>
+    
+    </body>
+    </html>
