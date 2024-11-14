@@ -628,6 +628,7 @@ section {
 }
 /*About section*/
 .timeline {
+    text-align: left;
     margin: 4rem 0;
     padding: 2rem;
     background: var(--bg-color);
@@ -695,6 +696,7 @@ section {
 }
 
 .timeline-item ul li {
+    text-align: left;
     font-size: 1.4rem;
     color: var(--text-color);
     margin-bottom: 0.5rem;
