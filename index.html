@@ -332,8 +332,7 @@
         </div>
     </section>
     
-    
-    
+    <!--Footer-->
         <footer class="footer">
             <div class="footer-text">
                 <p>Copyright © 2024 by Sheila Fana | All Rights Reserved.</p>
@@ -343,8 +342,11 @@
                 <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
             </div>
         </footer>
-        <script>
-              // Mobile menu toggle
+
+
+     <!--Javascript-->   
+<script>
+     // Mobile menu toggle
   const menuBtn = document.querySelector('.menu-btn');
   const navbar = document.querySelector('.navbar');
   const header = document.querySelector('.header');
@@ -365,9 +367,7 @@
       header.classList.toggle('sticky', window.scrollY > 100);
   };
 
-
-  
-//navbar
+//navbar links 
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.navbar a');
             
@@ -403,10 +403,9 @@
             
             window.addEventListener('scroll', updateActiveSection);
             updateActiveSection();
-
-
-            //email service
         </script>
+
+        <!-- EmailJS Integration -->
              <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
              <script type="text/javascript">
                  (function() {
@@ -432,9 +431,5 @@
             });
         }
     </script>
-        </script>
-           
-
-    
     </body>
     </html>
