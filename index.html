@@ -27,7 +27,7 @@
             </div>
     
             <nav class="navbar">
-                <a href="#home" class="active">Home</a>
+                <a href="#home" >Home</a>
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#skills">Skills</a>
@@ -42,7 +42,7 @@
                 <h3>Apprentice Developer</h3>
                 <p>I am a versatile software developer passionate about creating exceptional digital experiences. With expertise in UI/UX design, front-end development, and full-stack technologies, I bring a holistic approach to every project. My goal is to craft innovative solutions that not only meet technical requirements but also delight users with their intuitiveness and aesthetic appeal.</p>
                 <div class="btn-box">
-                    <a href="#contact">Hire Me</a>
+                    <a href="#portfolio">My Work</a>
                     <a href="mailto:wambitafana@gmail.com">Let's Talk</a>
                 </div>
     
@@ -64,7 +64,7 @@
         <div class="about-content">
            
             <h2 class="heading">About <span>Me</span></h2>
-            <h3>Software Engineer &amp; UI/UX Designer</h3>
+            <h3>Apprentice Developer &amp; UI/UX Designer</h3>
             <p>As an aspiring developer, I have recently gained hands-on experience with Go, JavaScript, C, and UI/UX design. My passion lies in building user-friendly applications and learning new technologies. I am focused on improving my skills in writing clean, efficient code and creating engaging, responsive user interfaces. My goal is to continue developing my abilities and contribute to projects that provide meaningful solutions while learning from experienced professionals.</p> 
             <div class="about-grid">
                 <div class="about-img">
@@ -304,7 +304,7 @@
             <!-- Email Section -->
             <div class="contact-email">
                 <h3>Send Me a Message</h3>
-                <form id="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <form id="contact-form" >
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
                     <input type="email" id="email" name="email" placeholder="Your Email (I don't share your info)" required>
                     <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
@@ -343,31 +343,98 @@
                 <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
             </div>
         </footer>
-
-    
         <script>
-            // Mobile menu toggle
-            const menuBtn = document.querySelector('.menu-btn');
-            const navbar = document.querySelector('.navbar');
-            const header = document.querySelector('.header');
-    
-            menuBtn.addEventListener('click', () => {
-                navbar.classList.toggle('active');
-            });
-    
-            // Close menu when clicking a link
-            document.querySelectorAll('.navbar a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navbar.classList.remove('active');
+              // Mobile menu toggle
+  const menuBtn = document.querySelector('.menu-btn');
+  const navbar = document.querySelector('.navbar');
+  const header = document.querySelector('.header');
+
+  menuBtn.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', () => {
+          navbar.classList.remove('active');
+      });
+  });
+
+  // Sticky header
+  window.onscroll = () => {
+      header.classList.toggle('sticky', window.scrollY > 100);
+  };
+
+
+  
+//navbar
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
                 });
             });
-    
-            // Sticky header
-            window.onscroll = () => {
-                header.classList.toggle('sticky', window.scrollY > 100);
-            };
+            
+            function updateActiveSection() {
+                let currentSectionId = '';
+                const scrollPosition = window.scrollY;
+            
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        currentSectionId = section.id;
+                    }
+                });
+            
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveSection);
+            updateActiveSection();
+
+
+            //email service
         </script>
-        <script src="app.js"></script>
+             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+             <script type="text/javascript">
+                 (function() {
+                     // https://dashboard.emailjs.com/admin/account
+                     emailjs.init({
+                       publicKey: "xcijB4HWlAnGZPwqB",
+                     });
+                 })();
+             </script>
+
+        <script type="text/javascript">
+              window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        alert('Your message has been sent successfully!');
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                        alert('Failed to send your message. Please try again later.');
+                    });
+            });
+        }
+    </script>
+        </script>
+           
+
     
     </body>
     </html>
