@@ -684,6 +684,7 @@ section {
 }
 
 .timeline-item p {
+    text-align: left;
     font-size: 1.6rem;
     margin-bottom: 1rem;
     color: var(--text-color);
